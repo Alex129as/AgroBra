@@ -8,7 +8,7 @@ import Routes from './routes';
 
 const App = () => (
   <PaperProvider>
-    <StatusBar barStyle="light-content" backgroundColor="#0d560c" />
+    <StatusBar barStyle="light-content" backgroundColor="#00692b" />
     <Routes />
   </PaperProvider>
 );

@@ -56,6 +56,9 @@ target 'AgroBra' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
   target 'AgroBraTests' do
     inherit! :complete
     # Pods for testing

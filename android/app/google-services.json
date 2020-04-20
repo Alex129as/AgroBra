@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "835175082803",
+    "firebase_url": "https://agrobra-9f944.firebaseio.com",
+    "project_id": "agrobra-9f944",
+    "storage_bucket": "agrobra-9f944.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835175082803:android:a29c1df00822db4b60ec46",
+        "android_client_info": {
+          "package_name": "com.AgroBra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835175082803-6dm0ajltlvia1jun6j595r11c1pfk8t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjsrYplkel-XDr0Hi4r9J0nHnKLlavEfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835175082803-6dm0ajltlvia1jun6j595r11c1pfk8t8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "835175082803-fib7aahirgkavuekh5njvm4ta9nkdepr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.AgroBra"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
