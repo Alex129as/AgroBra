@@ -99,7 +99,9 @@ const Login = ({navigation}) =>  {
                     alignItems: "center",
                     justifyContent: "center",
                     marginTop: 20}}>
-                    <Text style={Styles.TextPassword}> Esqueceu Sua Password?</Text>
+                    <Text style={Styles.TextPassword}
+                        onPress={()=> navigation.navigate('RecoverInPassword')}
+                    > Esqueceu Sua Password?</Text>
                     </TouchableOpacity> 
                 <TouchableOpacity style={{
                     marginTop: 40,
