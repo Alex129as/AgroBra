@@ -1,20 +1,20 @@
 import React from 'react';
 import {Container, Text} from 'native-base';
-const Cadastro = () =>{
+const RecoverInPassword = () =>{
     return(
         <Container>
             <Text>
-                Tela de Cadastro
+                Recuperar senha
             </Text>
         </Container>
 
     );
     
-    Cadastro.navigationOptions = {
-        title: 'Cadastro', 
+    RecoverInPassword.navigationOptions = {
+        title: 'RecoverInPassword', 
     }
 
 
 }
 
-export default Cadastro;
+export default RecoverInPassword;

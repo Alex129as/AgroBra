@@ -1,13 +1,15 @@
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
 import Login from './pages/Login/index';
-import Cadastro from './pages/Cadastro/index';
+import Register from './pages/Register/index';
 import HomePage from './pages/Dashboard/index';
+import RecoverInPassword from './pages/Recover Password/index';
 
 const Routes = createAppContainer(createSwitchNavigator({
     Login:Login,
-    Cadastro: Cadastro,
+    Register: Register,
     HomePage: HomePage,
+    RecoverInPassword: RecoverInPassword,
 }));
 
 export default Routes;

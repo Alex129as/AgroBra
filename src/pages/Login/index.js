@@ -18,7 +18,7 @@ import firebase from 'firebase';
 
 const Login = ({navigation}) =>  { 
     const [Email, setEmail] = useState('');
-    const [Senha, setSenha] = useState('');
+    const [Password, setPassword] = useState('');
     const [Logo] = useState(new Animated.ValueXY({x: 300, y:300 }));
     
     useEffect(()=>{
@@ -50,12 +50,12 @@ const Login = ({navigation}) =>  {
         ]).start();
     }
 
-    Logar = async () =>{
+    SingIn = async () =>{
       try{  
-        await firebase.auth().signInWithEmailAndPassword(Email, Senha);
+        await firebase.auth().signInWithEmailAndPassword(Email, Password);
         navigation.navigate('HomePage');
       }catch(err){
-          Alert.alert('Erro', err.message)
+          Alert.alert('Erro', 'Usário ou Password Inválidos! Preenha Novamente, ou efetue o seu Cadastro')
       }  
     }
 
@@ -83,15 +83,15 @@ const Login = ({navigation}) =>  {
                         }
                     /> 
                     <Input
-                        placeholder= 'Senha'
+                        placeholder= 'Password'
                         textContentType="password"
                         autoCompleteType="password"
                         secureTextEntry
-                        value={Senha}
-                        onChangeText={(text) => {setSenha(text);}}
+                        value={Password}
+                        onChangeText={(text) => {setPassword(text);}}
                         leftIcon={
                             <Image source={require('../../images/InputIcons/icon-cadeado.png')}
-                            style={Styles.IconSenha}
+                            style={Styles.IconPassword}
                             />
                         }/>
                 </View>      
@@ -99,7 +99,7 @@ const Login = ({navigation}) =>  {
                     alignItems: "center",
                     justifyContent: "center",
                     marginTop: 20}}>
-                    <Text style={Styles.TextSenha}> Esqueceu Sua Senha?</Text>
+                    <Text style={Styles.TextPassword}> Esqueceu Sua Password?</Text>
                     </TouchableOpacity> 
                 <TouchableOpacity style={{
                     marginTop: 40,
@@ -110,7 +110,7 @@ const Login = ({navigation}) =>  {
                     alignItems: 'center',
                     justifyContent: "center",
                     borderRadius: 50,}} 
-                    onPress={Logar}>
+                    onPress={SingIn}>
                     <Text style={Styles.Text}>ENTRAR</Text>
                 </TouchableOpacity>
                 <View style={Styles.SocialIcons}>
@@ -123,10 +123,10 @@ const Login = ({navigation}) =>  {
                         <Image source={require('../../images/SocialIcons/iconfacebook.png')} />
                     </TouchableOpacity>
                 </View>
-                <View style={Styles.Cadastro}>
-                    <Text style={Styles.Pergunta}>Não é Cadastrado? </Text>
-                    <TouchableOpacity style={Styles.InputCadastro} onPress={()=>{navigation.navigate('Cadastro');}}>  
-                        <Text style={Styles.TextCadastro}>
+                <View style={Styles.Register}>
+                    <Text style={Styles.Question}>Não é Cadastrado? </Text>
+                    <TouchableOpacity style={Styles.InputRegister} onPress={()=>{navigation.navigate('Register');}}>  
+                        <Text style={Styles.TextRegister}>
                             Clique Aqui
                         </Text>
                     </TouchableOpacity>
@@ -176,7 +176,7 @@ const Styles = StyleSheet.create({
         height: 30,
         marginLeft: -10
     },
-    IconSenha: {
+    IconPassword: {
         width: 40,
         height: 40,
         marginLeft: -15
@@ -186,7 +186,7 @@ const Styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 16
     },
-    TextSenha: {
+    TextPassword: {
         marginTop: 20,
         color: '#00692b',
         fontWeight: 'bold',
@@ -206,20 +206,20 @@ const Styles = StyleSheet.create({
         fontSize: 15,
         marginTop: 10
     },
-    Cadastro: {
+    Register: {
         flexDirection: 'row',
         marginTop: 15
     },
-    InputCadastro: {
+    InputRegister: {
 
     },
-    TextCadastro: {
+    TextRegister: {
         fontSize: 15,
         color: '#00692b',
         textDecorationLine: "underline",
         fontWeight: 'bold'
     },
-    Pergunta:{
+    Question:{
         fontSize: 15,
         color: '#00692b',
         fontWeight: 'bold'

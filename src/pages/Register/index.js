@@ -1,20 +1,20 @@
 import React from 'react';
 import {Container, Text} from 'native-base';
-const HomePage = (navigation) =>{
+const Register = () =>{
     return(
         <Container>
             <Text>
-                Bem Vindo
+                Tela de Register
             </Text>
         </Container>
 
     );
     
-    HomePage.navigationOptions = {
-        title: 'HomePage', 
+    Register.navigationOptions = {
+        title: 'Register', 
     }
 
 
 }
 
-export default HomePage;
+export default Register;
