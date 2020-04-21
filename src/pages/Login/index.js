@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import {Input} from 'react-native-elements';
 import '../../FirebaseServices/FirebaseServices';
-import firebase from 'firebase';
+import * as firebase from 'firebase';
 
 const Login = ({navigation}) =>  { 
     const [Email, setEmail] = useState('');
@@ -58,7 +58,6 @@ const Login = ({navigation}) =>  {
           Alert.alert('Erro', 'Usário ou Password Inválidos! Preenha Novamente, ou efetue o seu Cadastro')
       }  
     }
-
     return(
         <> 
            <KeyboardAvoidingView style={Styles.Container}>
