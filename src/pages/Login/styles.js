@@ -76,7 +76,4 @@ export const Linha = styled.View`
   margin-right: 10;
   height: 40;
 `;
-const Styles = StyleSheet.create({
-
-})
 
